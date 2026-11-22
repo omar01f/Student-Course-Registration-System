@@ -1,0 +1,40 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toast-enter {
+  animation: slideInRight 0.25s ease-out forwards;
+}
+
+@media print {
+  body {
+    background-color: #FFFFFF !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-shadow-none {
+    box-shadow: none !important;
+    border: 1px solid #CBD5E1 !important;
+  }
+  @page {
+    size: landscape;
+    margin: 12mm;
+  }
+}
